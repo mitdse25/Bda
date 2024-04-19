@@ -1,0 +1,28 @@
+Open terminal
+cd hadoop-docker-compose
+./run.sh
+init
+start-all.sh
+
+TO USE NANO AND CREATE FILES:
+nano input.txt -> write file contents
+ctrl + s + x (save & exit)
+(similarly make and save files)
+
+PIG EXECUTION :
+hdfs dfs -put input.txt /
+(now put only filename in path for loading data in pig )
+Eg pig code :
+record = LOAD '/input.txt' using pigstorage(',';
+STORE record INTO '/';
+
+RUNNING PIG:
+see kartabya 
+pig -x mapreduce pigscript.pig
+
+RUNNING PYTHON :
+nano q1.py(write contents,ctrl + s + x)
+python3 q1.py
+
+
+
